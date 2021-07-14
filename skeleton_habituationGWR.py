@@ -41,10 +41,8 @@ t = 0
 for l in x:
     if x[t] > 0:
         v = v* 0.7
-        
-    y = t*pls + v
     y [0,t] = v*x[t]
-    t+=1
+    t+=1 
     
 
 #     then indent 4 spaces and write the equation that
