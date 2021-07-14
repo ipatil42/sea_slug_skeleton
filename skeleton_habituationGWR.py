@@ -39,9 +39,14 @@ y = np.zeros((1,nTs)) # set up (define) a vector for the output time series
 #        the output at each time step. Ex:
 t = 0
 for l in x:
-    y = t*pls + stv
-    t+=1
+    if x[t] > 0:
+        v = v* 0.7
         
+    y = t*pls + v
+    y [0,t] = v*x[t]
+    t+=1
+    
+
 #     then indent 4 spaces and write the equation that
 #     describes how each input value in the vector x is 
 #     transformed to the output value in the vector y
