@@ -38,11 +38,10 @@ y = np.zeros((1,nTs)) # set up (define) a vector for the output time series
 #        the input series and calculate
 #        the output at each time step. Ex:
 t = 0
-for l in x:
-    if x[t] > 0:
-        v = v* 0.7
+for t in range(nTs):
     y [0,t] = v*x[t]
-    t+=1 
+    if x[t] > 0:
+        v = v* 0.7 
     
 
 #     then indent 4 spaces and write the equation that
